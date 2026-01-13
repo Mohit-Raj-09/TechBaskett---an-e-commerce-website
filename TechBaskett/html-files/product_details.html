@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - TechBaskett</title>
+    <link rel="stylesheet" href="css-files/product_details.css" />
+        <link rel="stylesheet" href="css-files/nav-footer.css">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .product-detail-container {
+        max-width: 1200px;
+        margin: 0px auto 50px;
+        padding: 0 5%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding-top: 10%;
+      }
+      .product-detail-image {
+        flex: 1;
+        min-width: 300px;
+        background: #f5f5f5;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .product-detail-image img {
+        max-width: 100%;
+        height: auto;
+      }
+      .product-detail-info {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .product-detail-info h1 {
+        font-size: 28px;
+        color: #333;
+      }
+      .product-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #096d9c;
+      }
+      .product-description {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+      }
+      .product-actions {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .product-actions button {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      .add-to-cart {
+        background: #fff;
+        color: #096d9c;
+        border: 2px solid #096d9c;
+      }
+      .add-to-cart:hover {
+        background: #096d9c;
+        color: #fff;
+      }
+      .buy-now {
+        background: #096d9c;
+        color: #fff;
+      }
+      .buy-now:hover {
+        background: #085f8a;
+      }
+      .product-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        background-color: #096d9c;
+        color: white;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .loading-message {
+        text-align: center;
+        padding: 100px 0;
+        font-size: 18px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Navigation Bar -->
+      <nav id="nav">
+        <div id="nav_content">
+          <div id="logo">
+            <img
+              src="Images/All YOUR TECH IN ONE BASKETT (1).png"
+              alt="TechBaskett Logo"
+            />
+          </div>
+          <div id="options">
+            <button class="nav-btn"><a href="home.html">Home</a></button>
+            <button class="nav-btn">
+              <a href="All_products.html" target="_self">All Products</a>
+            </button>
+            <div class="dropdown">
+              <button class="nav-btn" id="btn-drop">Categories</button>
+              <div class="dropdown-content">
+                <a href="Audio_products.html">Audio</a>
+                <a href="Gaming_products.html">Gaming</a>
+                <a href="Laptops.html">Laptops</a>
+                <a href="Monitors.html">Monitors</a>
+                <a href="Smart_wearables.html">Smart Wearables</a>
+                <a href="Smartphones.html">Smartphones</a>
+                <a href="Tablets.html">Tablets</a>
+                <a href="TV.html">TVs</a>
+              </div>
+            </div>
+            <button class="nav-btn"><a  href="contact.html">Contact</a></button>
+          </div>
+          <div id="icons">
+            <a href="All_products.html"><i class="ri-search-line"></i></a>
+            <a href="user-account.html"><i class="ri-user-line"></i></a>
+            <a href="my-cart.html"><i class="ri-shopping-cart-line"></i></a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Product Detail Section -->
+      <div class="product-detail-container" id="productDetailContainer">
+        <div class="loading-message">Loading product details...</div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              Your one-stop shop for premium tech products. Quality gadgets,
+              fast delivery, and excellent customer service.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="All_products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+          </div>
+          <div class="footer-section">
+            <h3>Customer Service</h3>
+            <a href="#">FAQ</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="ri-map-pin-line"></i> 123 Tech Street, Silicon Valley
+            </p>
+            <p><i class="ri-phone-line"></i> +91 92896 79231</p>
+            <p><i class="ri-mail-line"></i>&nbsp; support@techbaskett.com</p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 TechBaskett. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js-files/products.js"></script>
+    <script src="js-files/cart.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get("id"));
+
+        // Find the product in the productsData array
+        const product = window.productsData.find((p) => p.id === productId);
+        const container = document.getElementById("productDetailContainer");
+
+        if (product) {
+          // Update the page title
+          document.title = `${product.name} - TechBaskett`;
+
+          // Render the product details
+          container.innerHTML = `
+        <div class="product-detail-image">
+          <img src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="product-detail-info">
+          ${
+            product.badge
+              ? `<div class="product-badge">${product.badge}</div>`
+              : ""
+          }
+          <h1>${product.name}</h1>
+          <div class="product-price">₹${product.price.toLocaleString(
+            "en-IN"
+          )}</div>
+          <p class="product-description">${product.description}</p>
+          <div class="product-actions">
+            <button class="add-to-cart" onclick="addToCart(${
+              product.id
+            })">Add to Cart</button>
+            <button class="buy-now" onclick="buyNow(${
+              product.id
+            })">Buy Now</button>
+          </div>
+        </div>
+      `;
+        } else {
+          // Product not found
+          container.innerHTML = `
+        <div style="width: 100%; text-align: center; padding: 100px 0;">
+          <h2>Product Not Found</h2>
+          <p>The requested product could not be found.</p>
+          <a href="All_products.html" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background: #096d9c; color: white; text-decoration: none; border-radius: 5px;">Back to Products</a>
+        </div>
+      `;
+        }
+      });
+
+      function buyNow(productId) {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        if (!loggedInUser) {
+          alert("Please login to proceed with your order");
+          window.location.href = "user-account.html";
+          return;
+        }
+
+        // Create temp cart with just this product
+        const product = window.productsData.find((p) => p.id == productId);
+        if (!product) return;
+
+        const cart = [{ ...product, quantity: 1 }];
+
+        // Save the temp cart
+        let cartData = JSON.parse(localStorage.getItem("cart")) || {};
+        cartData[loggedInUser.email] = cart;
+        localStorage.setItem("cart", JSON.stringify(cartData));
+
+        window.location.href = "buy-now.html";
+      }
+    </script>
+  </body>
+</html>

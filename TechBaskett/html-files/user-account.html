@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Account - TechBaskett</title>
+    <link rel="stylesheet" href="css-files/user-account.css" />
+        <link rel="stylesheet" href="css-files/nav-footer.css">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Navigation -->
+      <div id="nav">
+        <div id="nav_content">
+          <div id="logo">
+            <img
+              src="Images/All YOUR TECH IN ONE BASKETT (1).png"
+              alt="logo"
+              height="50px"
+              width="180px"
+            />
+          </div>
+
+          <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <div id="options">
+            <button class="nav-btn"><a href="home.html">Home</a></button>
+            <button class="nav-btn">
+              <a href="All_products.html" target="_self">All Products</a>
+            </button>
+            <div class="dropdown">
+              <button class="nav-btn" id="btn-drop">Categories</button>
+              <div class="dropdown-content">
+                <a href="Audio_products.html">Audio</a>
+                <a href="Gaming_products.html">Gaming</a>
+                <a href="Laptops.html">Laptops</a>
+                <a href="Monitors.html">Monitors</a>
+                <a href="Smart_wearables.html">Smart Wearables</a>
+                <a href="Smartphones.html">Smartphones</a>
+                <a href="Tablets.html">Tablets</a>
+                <a href="TV.html">TVs</a>
+              </div>
+            </div>
+            <button class="nav-btn"><a  href="contact.html">Contact</a></button>
+          </div>
+          <div id="icons">
+            <a href="All_products.html"><i class="ri-search-line"></i></a>
+            <a href="user-account.html"><i class="ri-user-line"></i></a>
+            <a href="my-cart.html"><i class="ri-shopping-cart-line"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Content -->
+      <div class="account-container">
+        <div class="account-content">
+          <!-- Account Info (shown when logged in) - Centered version -->
+          <div
+            class="account-info"
+            id="account-info"
+            style="display: none; max-width: 800px; margin: 0 auto"
+          >
+            <h2 class="form-title">My Account</h2>
+
+            <!-- User Profile Section -->
+            <div class="account-section profile-section">
+              <h3><i class="ri-user-3-line"></i> Profile Information</h3>
+              <div class="account-details" id="account-details">
+                <!-- Profile details will be populated here -->
+              </div>
+              <button class="edit-btn" id="edit-profile-btn">
+                <i class="ri-edit-line"></i> Edit Profile
+              </button>
+            </div>
+
+            <!-- Order History Section -->
+            <div class="account-section order-section">
+              <h3><i class="ri-history-line"></i> Order History</h3>
+              <div class="order-history" id="order-history">
+                <!-- Order details will be populated here -->
+              </div>
+              <button class="view-all-btn" id="view-all-orders-btn">
+                <i class="ri-eye-line"></i> View All Orders
+              </button>
+            </div>
+
+            <!-- Account Actions -->
+            <div class="account-actions">
+              <button class="logout-btn" id="logout-btn">
+                <i class="ri-logout-circle-r-line"></i> Logout
+              </button>
+            </div>
+          </div>
+
+          <!-- Centered Login/Signup Forms -->
+          <div id="auth-forms" style="max-width: 500px; margin: 0 auto">
+            <div id="login-form">
+              <h2 class="form-title">Login</h2>
+              <form id="loginForm">
+                <div class="form-group">
+                  <label for="login-email">Email</label>
+                  <input type="email" id="login-email" required />
+                </div>
+                <div class="form-group">
+                  <label for="login-password">Password</label>
+                  <input type="password" id="login-password" required />
+                  <div id="login-error" class="error-message"></div>
+                </div>
+                <button type="submit" class="form-submit">Login</button>
+              </form>
+              <div class="form-toggle">
+                Don't have an account? <a href="#" id="show-signup">Sign up</a>
+              </div>
+            </div>
+
+            <div id="signup-form" style="display: none">
+              <h2 class="form-title">Create Account</h2>
+              <form id="signupForm">
+                <div class="form-group">
+                  <label for="signup-name">Full Name</label>
+                  <input type="text" id="signup-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="signup-email">Email</label>
+                  <input type="email" id="signup-email" required />
+                </div>
+                <div class="form-group">
+                  <label for="signup-phone">Phone Number</label>
+                  <input type="tel" id="signup-phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="signup-password">Password</label>
+                  <input type="password" id="signup-password" required />
+                </div>
+                <div class="form-group">
+                  <label for="signup-confirm">Confirm Password</label>
+                  <input type="password" id="signup-confirm" required />
+                  <div id="signup-error" class="error-message"></div>
+                  <div id="signup-success" class="success-message"></div>
+                </div>
+                <button type="submit" class="form-submit">
+                  Create Account
+                </button>
+              </form>
+              <div class="form-toggle">
+                Already have an account? <a href="#" id="show-login">Login</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              Your one-stop shop for premium tech products. Quality gadgets,
+              fast delivery, and excellent customer service.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="All_products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Customer Service</h3>
+            <a href="#">FAQ</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="ri-map-pin-line"></i> 123 Tech Street, Silicon Valley
+            </p>
+            <p><i class="ri-phone-line"></i> +91 92896 79231</p>
+            <p><i class="ri-mail-line"></i>&nbsp; support@techbaskett.com</p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2023 TechBaskett. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // In the userDB.init() function, update to initialize cart properly
+      const userDB = {
+        init: function () {
+          if (!localStorage.getItem("users")) {
+            const demoUsers = [
+              {
+                name: "John Doe",
+                email: "john@example.com",
+                phone: "1234567890",
+                password: "password123",
+              },
+              {
+                name: "Jane Smith",
+                email: "jane@example.com",
+                phone: "9876543210",
+                password: "password123",
+              },
+            ];
+            localStorage.setItem("users", JSON.stringify(demoUsers));
+          }
+
+          // Initialize cart as an object with user emails as keys
+          if (!localStorage.getItem("cart")) {
+            localStorage.setItem("cart", JSON.stringify({}));
+          }
+
+          // Initialize orders if not exists
+          if (!localStorage.getItem("orders")) {
+            localStorage.setItem("orders", JSON.stringify({}));
+          }
+
+          // Initialize products if not exists (for demo purposes)
+          if (!localStorage.getItem("productsData")) {
+            localStorage.setItem(
+              "productsData",
+              JSON.stringify(window.productsData || [])
+            );
+          }
+        },
+
+        // Get all users
+        getUsers: function () {
+          return JSON.parse(localStorage.getItem("users")) || [];
+        },
+
+        // Add a new user
+        addUser: function (user) {
+          const users = this.getUsers();
+          users.push(user);
+          localStorage.setItem("users", JSON.stringify(users));
+
+          // Initialize cart for new user
+          const cart = JSON.parse(localStorage.getItem("cart"));
+          cart[user.email] = [];
+          localStorage.setItem("cart", JSON.stringify(cart));
+        },
+
+        // Find user by email
+        findUserByEmail: function (email) {
+          const users = this.getUsers();
+          return users.find((u) => u.email === email);
+        },
+
+        // Authenticate user
+        authenticate: function (email, password) {
+          const user = this.findUserByEmail(email);
+          if (user && user.password === password) {
+            return user;
+          }
+          return null;
+        },
+      };
+
+      // Initialize the user database
+      userDB.init();
+
+      // DOM Elements
+      const loginForm = document.getElementById("loginForm");
+      const signupForm = document.getElementById("signupForm");
+      const showLogin = document.getElementById("show-login");
+      const showSignup = document.getElementById("show-signup");
+      const loginError = document.getElementById("login-error");
+      const signupError = document.getElementById("signup-error");
+      const signupSuccess = document.getElementById("signup-success");
+      const accountInfo = document.getElementById("account-info");
+      const accountDetails = document.getElementById("account-details");
+      const logoutBtn = document.getElementById("logout-btn");
+
+      // Toggle between login and signup forms
+      showSignup.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("signup-form").style.display = "block";
+      });
+
+      showLogin.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.getElementById("signup-form").style.display = "none";
+        document.getElementById("login-form").style.display = "block";
+      });
+
+      // Check if user is already logged in
+      document.addEventListener("DOMContentLoaded", () => {
+        const loggedInUser = localStorage.getItem("loggedInUser");
+        if (loggedInUser) {
+          showAccountInfo(JSON.parse(loggedInUser));
+        }
+      });
+
+      // Login Form Submission
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("login-email").value;
+        const password = document.getElementById("login-password").value;
+
+        const user = userDB.authenticate(email, password);
+
+        if (user) {
+          localStorage.setItem("loggedInUser", JSON.stringify(user));
+          showAccountInfo(user);
+          loginError.textContent = "";
+        } else {
+          loginError.textContent = "Invalid email or password";
+        }
+      });
+
+      // Signup Form Submission
+      signupForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("signup-name").value;
+        const email = document.getElementById("signup-email").value;
+        const phone = document.getElementById("signup-phone").value;
+        const password = document.getElementById("signup-password").value;
+        const confirm = document.getElementById("signup-confirm").value;
+
+        if (password !== confirm) {
+          signupError.textContent = "Passwords do not match";
+          return;
+        }
+
+        if (userDB.findUserByEmail(email)) {
+          signupError.textContent = "Email already registered";
+          return;
+        }
+
+        const newUser = { name, email, phone, password };
+        userDB.addUser(newUser);
+
+        signupError.textContent = "";
+        signupSuccess.textContent =
+          "Account created successfully! Please login.";
+        document.getElementById("signup-form").reset();
+
+        // Switch to login form after a delay
+        setTimeout(() => {
+          document.getElementById("signup-form").style.display = "none";
+          document.getElementById("login-form").style.display = "block";
+          signupSuccess.textContent = "";
+        }, 2000);
+      });
+
+      // Logout
+      logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("loggedInUser");
+        accountInfo.style.display = "none";
+        document.getElementById("login-form").style.display = "block";
+        document.getElementById("loginForm").reset();
+      });
+
+      // Show account info when logged in
+      function showAccountInfo(user) {
+        document.getElementById("login-form").style.display = "none";
+        document.getElementById("signup-form").style.display = "none";
+
+        // Get user's orders
+        let orders = JSON.parse(localStorage.getItem("orders")) || {};
+        const userOrders = orders[user.email] || [];
+
+        // Profile details
+        accountDetails.innerHTML = `
+        <p><strong>Name:</strong> <span>${user.name}</span></p>
+        <p><strong>Email:</strong> <span>${user.email}</span></p>
+        <p><strong>Phone:</strong> <span>${
+          user.phone || "Not provided"
+        }</span></p>
+    `;
+
+        // Order history
+        const orderHistory = document.getElementById("order-history");
+        if (userOrders.length > 0) {
+          orderHistory.innerHTML = userOrders
+            .slice(0, 3)
+            .map(
+              (order) => `
+            <div class="order-item">
+                <p><strong>Order #${order.id}</strong></p>
+                <p>Date: ${new Date(order.date).toLocaleDateString()}</p>
+                <p>${order.items.length} items - ₹${order.total.toLocaleString(
+                "en-IN"
+              )}</p>
+                <p>Status: <span class="order-status status-${order.status.toLowerCase()}">${
+                order.status
+              }</span></p>
+            </div>
+        `
+            )
+            .join("");
+
+          document.getElementById("view-all-orders-btn").style.display =
+            "block";
+        } else {
+          orderHistory.innerHTML =
+            "<p>No orders yet. Start shopping to see your order history here.</p>";
+          document.getElementById("view-all-orders-btn").style.display = "none";
+        }
+
+        accountInfo.style.display = "block";
+
+        // Add event listener for view all orders
+        document
+          .getElementById("view-all-orders-btn")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            // You could implement a more detailed order history page here
+            alert("Order history feature would show all your orders here");
+          });
+
+        // Add event listener for edit profile
+        document
+          .getElementById("edit-profile-btn")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            alert("Edit profile functionality would be implemented here");
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechBaskett</title>
+    <link rel="stylesheet" href="css-files/home.css" />
+    <link rel="stylesheet" href="css-files/nav-footer.css" />
+
+    <link
+      rel="website icon"
+      type="png"
+      href="Images/All YOUR TECH IN ONE BASKETT (1).png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+  </head>
+  <body>
+    <div id="tech-loader">
+      <div class="loader-container">
+        <div class="tech-circle">
+          <div class="inner-circle">
+            <i class="ri-shopping-basket-2-fill basket-icon"></i>
+          </div>
+          <div class="tech-ring"></div>
+          <div class="tech-particle particle-1"></div>
+          <div class="tech-particle particle-2"></div>
+          <div class="tech-particle particle-3"></div>
+          <div class="tech-particle particle-4"></div>
+        </div>
+        <div class="loader-text">
+          <span class = "loader-letter"> T </span>
+          <span class = "loader-letter"> E </span>
+          <span class = "loader-letter"> C </span>
+          <span class = "loader-letter"> H </span>
+          <span class = "loader-letter"> B </span>
+          <span class = "loader-letter"> A </span>
+          <span class = "loader-letter"> S </span>
+          <span class = "loader-letter"> K </span>
+          <span class = "loader-letter"> E </span>
+          <span class = "loader-letter"> T </span>
+          <span class = "loader-letter"> T </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div id="nav">
+        <div id="nav_content">
+          <div id="logo">
+            <img
+              src="Images/All YOUR TECH IN ONE BASKETT (1).png"
+              alt="logo"
+              height="50px"
+              width="180px"
+            />
+          </div>
+
+          <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <div id="options">
+            <button class="nav-btn"><a href="home.html">Home</a></button>
+            <button class="nav-btn">
+              <a href="All_products.html" target="_self">All Products</a>
+            </button>
+            <div class="dropdown">
+              <button class="nav-btn" id="btn-drop">Categories</button>
+              <div class="dropdown-content">
+                <a href="Audio_products.html">Audio</a>
+                <a href="Gaming_products.html">Gaming</a>
+                <a href="Laptops.html">Laptops</a>
+                <a href="Monitors.html">Monitors</a>
+                <a href="Smart_wearables.html">Smart Wearables</a>
+                <a href="Smartphones.html">Smartphones</a>
+                <a href="Tablets.html">Tablets</a>
+                <a href="TV.html">TVs</a>
+              </div>
+            </div>
+            <button class="nav-btn"><a href="contact.html">Contact</a></button>
+          </div>
+          <div id="icons">
+            <a href="All_products.html"><i class="ri-search-line"></i></a>
+            <a href="user-account.html"><i class="ri-user-line"></i></a>
+            <a href="my-cart.html"><i class="ri-shopping-cart-line"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="poster">
+        <div id="poster_content">
+          <div id="text">
+            <h1>Latest Tech Arrivals</h1>
+            <p>
+              Discover cutting-edge gadgets and tech innovations that enhance
+              your digital lifestyle. Premium quality at competitive prices.
+            </p>
+            <br />
+            <div id="btn">
+              <a href="All_products.html"
+                ><button id="btn1">Shop Now</button></a
+              >
+              <a href="#featured"
+                ><button id="btn2">Explore Featured</button></a
+              >
+            </div>
+          </div>
+          <div id="image">
+            <img
+              src="https://images.unsplash.com/photo-1721686602598-005825cce7c8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjM0fHxnYWRnZXRzfGVufDB8fDB8fHww"
+              height="370px"
+              width="550px"
+              alt="poster"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="welcome">
+        <h1>
+          Welcome to <span id="s1">Tech</span><span id="s2">Baskett</span>
+        </h1>
+        <p>
+          Your one-stop destination for premium tech products. Explore our vast
+          collection of gadgets, accessories, and electronics at competitive
+          prices.
+        </p>
+      </div>
+
+      <div id="catalog">
+        <div id="text_catalog">
+          <h1>Shop by Categories</h1>
+        </div>
+        <div id="img_catalog">
+          <div class="catalog-layer" id="layer1">
+            <div class="catalog-item" id="laptop">
+              <a href="Laptops.html">
+                <div id="up">
+                  <h2>Laptops</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1672241860863-fab879bd4a07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>High-performance laptops for work and play</p>
+                </div>
+              </a>
+            </div>
+            <div class="catalog-item" id="smartphones">
+              <a href="Smartphones.html">
+                <div id="up">
+                  <h2>Smartphones</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1627405452946-31ce7c7ff785?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>Latest smartphones with cutting-edge features</p>
+                </div>
+              </a>
+            </div>
+            <div class="catalog-item" id="audio">
+              <a href="Audio_products.html">
+                <div id="up">
+                  <h2>Audio</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYWRwaG9uZXN8ZW58MHx8MHx8fDA%3D"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>Premium audio equipment for immersive sound</p>
+                </div>
+              </a>
+            </div>
+            <div class="catalog-item" id="pc_compo">
+              <a href="Smart_wearables.html">
+                <div id="up">
+                  <h2>Smart Wearables</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1617625802912-cde586faf331?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>Build your dream PC with premium components</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="catalog-layer" id="layer2">
+            <div class="catalog-item" id="tv">
+              <a href="TV.html">
+                <div id="up">
+                  <h2>TVs</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U21hcnQlMjBUVnxlbnwwfHwwfHx8MA%3D%3D"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>Smart TVs with stunning picture quality</p>
+                </div>
+              </a>
+            </div>
+            <div class="catalog-item" id="gaming">
+              <a href="Gaming_products.html">
+                <div id="up">
+                  <h2>Gaming</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>Gaming consoles, peripherals, and accessories</p>
+                </div>
+              </a>
+            </div>
+            <div class="catalog-item" id="tablet">
+              <a href="Tablets.html">
+                <div id="up">
+                  <h2>Tablets</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1638273266965-843b01e02a5c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>Versatile tablets for productivity and entertainment</p>
+                </div>
+              </a>
+            </div>
+            <div class="catalog-item" id="monitor">
+              <a href="Monitors.html">
+                <div id="up">
+                  <h2>Monitors</h2>
+                  <img
+                    src="https://images.unsplash.com/photo-1628082550734-43fee7182e05?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODN8fG1vbml0b3JzfGVufDB8fDB8fHww"
+                    height="200px"
+                    width="100%"
+                    alt=""
+                  />
+                </div>
+                <div id="down">
+                  <p>High-resolution displays for work and gaming</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="featured">
+        <h1>Featured Products</h1>
+        <p>Check out our most popular items this season</p>
+
+        <div id="featured_img">
+          <!-- Products will be dynamically inserted here by JavaScript -->
+        </div>
+      </div>
+
+      <div id="promo">
+        <div id="promo-content">
+          <div id="pro-text">
+            <h2>Limited Time Offer</h2>
+            <p>Get 20% off on all products by using the code : TBASKETT09</p>
+          </div>
+          <div id="pro-btn">
+            <a href="All_products.html">
+              <button>Shop Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              Your one-stop shop for premium tech products. Quality gadgets,
+              fast delivery, and excellent customer service.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="All_products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Customer Service</h3>
+            <a href="#">FAQ</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="ri-map-pin-line"></i> 123 Tech Street, Silicon Valley
+            </p>
+            <p><i class="ri-phone-line"></i> +91 92896 79231</p>
+            <p><i class="ri-mail-line"></i>&nbsp; support@techbaskett.com</p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2023 TechBaskett. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Loader removal script
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          const loader = document.getElementById("tech-loader");
+          loader.style.opacity = "0";
+          setTimeout(function () {
+            loader.style.display = "none";
+          }, 800); // Match this with the CSS transition duration
+        }, 1500); // Adjust this timeout to show loader for at least 1.5 seconds
+      });
+    </script>
+
+    <script src="js-files/products.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Fallback for browsers that don't support scroll-driven animations
+        if (!CSS.supports("animation-timeline: view()")) {
+          const fadeSections = document.querySelectorAll(
+            "#welcome, #catalog, #featured, #promo"
+          );
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.style.opacity = 1;
+                  entry.target.style.transform = "translateY(0)";
+                  // Don't unobserve - keeps elements visible
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+            }
+          );
+
+          fadeSections.forEach((section) => {
+            section.style.opacity = 0;
+            section.style.transform = "translateY(20px)";
+            section.style.transition =
+              "opacity 0.8s ease-out, transform 0.8s ease-out";
+            observer.observe(section);
+          });
+        }
+
+        // Get featured products container
+        const featuredContainer = document.getElementById("featured_img");
+
+        // Featured product IDs (you can modify this array to change which products are featured)
+        const featuredProductIds = [17, 12, 37, 4, 13, 31, 6, 51];
+
+        // Filter products to get only featured ones
+        const featuredProducts = window.productsData.filter((product) =>
+          featuredProductIds.includes(product.id)
+        );
+
+        // Split featured products into two layers (4 products each)
+        const layer1Products = featuredProducts.slice(0, 4);
+        const layer2Products = featuredProducts.slice(4, 8);
+
+        // Function to create product HTML
+        function createProductHTML(product) {
+          return `
+                    <div class="products">
+                        <a href="product_details.html" class="product-link" data-product-id="${
+                          product.id
+                        }">
+                            <div id="up">
+                                <img src="${
+                                  product.image
+                                }" height="200px" width="100%" alt="${product.name}">
+                                ${
+                                  product.badge
+                                    ? `
+                                <div id="trend">
+                                    <h5>${product.badge}</h5>
+                                </div>`
+                                    : ""
+                                }
+                            </div>
+                            <div id="down">
+                                <p>${product.category}</p>
+                                <h3>${product.name}</h3>
+                                <div id="rate">
+                                    <span>₹${product.price.toLocaleString(
+                                      "en-IN"
+                                    )}</span>  
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                `;
+        }
+
+        // Create HTML for both layers
+        let layer1HTML = '<div class="products-layer" id="layer1">';
+        layer1Products.forEach((product) => {
+          layer1HTML += createProductHTML(product);
+        });
+        layer1HTML += "</div>";
+
+        let layer2HTML = '<div class="products-layer" id="layer2">';
+        layer2Products.forEach((product) => {
+          layer2HTML += createProductHTML(product);
+        });
+        layer2HTML += "</div>";
+
+        // Insert HTML into container
+        featuredContainer.innerHTML = layer1HTML + layer2HTML;
+
+        // Add click event listeners to product links
+        const productLinks = document.querySelectorAll(".product-link");
+        productLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const productId = this.getAttribute("data-product-id");
+            window.location.href = `product_details.html?id=${productId}`;
+          });
+        });
+
+        // Add click event listeners to cart buttons
+        const cartButtons = document.querySelectorAll(".add_cart");
+        cartButtons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Get the logged in user
+            const loggedInUser = JSON.parse(
+              localStorage.getItem("loggedInUser")
+            );
+
+            if (!loggedInUser) {
+              alert("Please login to add items to your cart");
+              window.location.href = "user-account.html";
+              return;
+            }
+
+            // Get the product ID from the parent link
+            const productId = parseInt(
+              this.closest(".product-link").getAttribute("data-product-id")
+            );
+
+            // Find the product in productsData
+            const product = window.productsData.find((p) => p.id === productId);
+
+            if (product) {
+              // Get or initialize cart
+              let cart = JSON.parse(localStorage.getItem("cart")) || {};
+              const userCart = cart[loggedInUser.email] || [];
+
+              // Check if product already exists in cart
+              const existingItem = userCart.find(
+                (item) => item.id === productId
+              );
+
+              if (existingItem) {
+                existingItem.quantity += 1;
+              } else {
+                userCart.push({
+                  id: productId,
+                  quantity: 1,
+                });
+              }
+
+              // Update cart in localStorage
+              cart[loggedInUser.email] = userCart;
+              localStorage.setItem("cart", JSON.stringify(cart));
+
+              alert(`${product.name} added to cart!`);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

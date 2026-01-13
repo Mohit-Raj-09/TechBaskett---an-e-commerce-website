@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechBaskett - All Products</title>
+    <link rel="stylesheet" href="css-files/All_products.css" />
+    <link rel="stylesheet" href="css-files/nav-footer.css">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Navigation Bar -->
+      <nav id="nav">
+        <div id="nav_content">
+          <div id="logo">
+            <img
+              src="Images/All YOUR TECH IN ONE BASKETT (1).png"
+              alt="TechBaskett Logo"
+            />
+          </div>
+
+          <button id="menu-toggle">
+            <i class="ri-menu-line"></i>
+          </button>
+
+          <div id="options">
+            <button class="nav-btn"><a href="home.html">Home</a></button>
+            <button class="nav-btn">
+              <a href="All_products.html" target="_self">All Products</a>
+            </button>
+            <div class="dropdown">
+              <button class="nav-btn" id="btn-drop">Categories</button>
+              <div class="dropdown-content">
+                <a href="Audio_products.html">Audio</a>
+                <a href="Gaming_products.html">Gaming</a>
+                <a href="Laptops.html">Laptops</a>
+                <a href="Monitors.html">Monitors</a>
+                <a href="Smart_wearables.html">Smart Wearables</a>
+                <a href="Smartphones.html">Smartphones</a>
+                <a href="Tablets.html">Tablets</a>
+                <a href="TV.html">TVs</a>
+              </div>
+            </div>
+            <button class="nav-btn"><a  href="contact.html">Contact</a></button>
+          </div>
+          <div id="icons">
+            <a href="All_products.html"><i class="ri-search-line"></i></a>
+            <a href="user-account.html"><i class="ri-user-line"></i></a>
+            <a href="my-cart.html"><i class="ri-shopping-cart-line"></i></a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <div id="main-container">
+        <div class="left-container">
+          <h1>All Products</h1>
+          <p class="subtitle">
+            Discover our collection of quality tech products
+          </p>
+
+          <div class="filters">
+            <div class="filter-section">
+              <div class="filter-title">Filters</div>
+              <input
+                type="text"
+                class="search-bar"
+                placeholder="Search products..."
+                id="searchInput"
+              />
+              <button id="resetFilters" class="reset-btn">
+                Reset All Filters
+              </button>
+            </div>
+
+            <div class="filter-section">
+              <div class="filter-title">Categories</div>
+              <ul class="category-list">
+                <li class="category-item">
+                  <input type="checkbox" id="all" checked />
+                  <label for="all">All Categories</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="Audio" />
+                  <label for="audio">Audio</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="Laptops" />
+                  <label for="laptops">Laptops</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="TVs" />
+                  <label for="tvs">TVs</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="Tablets" />
+                  <label for="tablets">Tablets</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="Smartphones" />
+                  <label for="smartphones">Smartphones</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="Smart Wearables" />
+                  <label for="smartwearables">Smart Wearables</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="Monitors" />
+                  <label for="monitors">Monitors</label>
+                </li>
+                <li class="category-item">
+                  <input type="checkbox" id="Gaming" />
+                  <label for="gaming">Gaming</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="filter-section">
+              <div class="filter-title">Price Range</div>
+              <div class="price-range">
+                <input
+                  type="number"
+                  class="price-input"
+                  placeholder="Min ($)"
+                  min="0"
+                  value="0"
+                  id="minPrice"
+                />
+                <span>to</span>
+                <input
+                  type="number"
+                  class="price-input"
+                  placeholder="Max ($)"
+                  min="0"
+                  value="10000"
+                  id="maxPrice"
+                />
+              </div>
+              <div class="price-slider-container">
+                <input
+                  type="range"
+                  min="0"
+                  max="100000"
+                  value="0"
+                  class="price-slider"
+                  id="minPriceSlider"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="100000"
+                  value="10000"
+                  class="price-slider"
+                  id="maxPriceSlider"
+                />
+                <div class="price-display">
+                  <span id="minPriceDisplay">₹0</span> -
+                  <span id="maxPriceDisplay">₹10,000</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <div class="filter-title">Sort By</div>
+              <select id="sortBy" class="sort-select">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name-asc">Name: A-Z</option>
+                <option value="name-desc">Name: Z-A</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-container">
+          <div class="products-header">
+            <div class="results-count" id="resultsCount"></div>
+            <div class="view-options">
+              <button class="view-btn active" data-view="grid">
+                <i class="ri-grid-fill"></i>
+              </button>
+              <button class="view-btn" data-view="list">
+                <i class="ri-list-unordered"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="featured">
+            <div class="products-container" id="productsContainer">
+              <!-- Products will be dynamically inserted here -->
+            </div>
+            <div class="no-products" id="noProductsMessage">
+              <p>No products found matching your criteria</p>
+              <button id="resetFilters2" class="reset-btn">
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Promo Section -->
+      <div id="promo">
+        <div id="promo-content">
+          <div id="pro-text">
+            <h2>Limited Time Offer</h2>
+            <p>Get 20% off on all products by using the code: TBASKETT09</p>
+          </div>
+          <div id="pro-btn">
+            <a href="All_products.html">
+              <button>Shop Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              Your one-stop shop for premium tech products. Quality gadgets,
+              fast delivery, and excellent customer service.
+            </p>
+            <div class="social-icons">
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a>
+            <a href="All_products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Customer Service</h3>
+            <a href="#">FAQ</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              <i class="ri-map-pin-line"></i> 123 Tech Street, Silicon Valley
+            </p>
+            <p><i class="ri-phone-line"></i> +91 92896 79231</p>
+            <p><i class="ri-mail-line"></i>&nbsp; support@techbaskett.com</p>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2023 TechBaskett. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js-files/cart.js"></script>
+    <script src="js-files/products.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const productsContainer = document.getElementById("productsContainer");
+    const searchInput = document.getElementById("searchInput");
+    const minPriceInput = document.getElementById("minPrice");
+    const maxPriceInput = document.getElementById("maxPrice");
+    const minPriceSlider = document.getElementById("minPriceSlider");
+    const maxPriceSlider = document.getElementById("maxPriceSlider");
+    const minPriceDisplay = document.getElementById("minPriceDisplay");
+    const maxPriceDisplay = document.getElementById("maxPriceDisplay");
+    const categoryCheckboxes = document.querySelectorAll(
+      ".category-list input[type='checkbox']"
+    );
+    const sortSelect = document.getElementById("sortBy");
+    const resultsCount = document.getElementById("resultsCount");
+    const resetFiltersBtn = document.getElementById("resetFilters");
+    const resetFiltersBtn2 = document.getElementById("resetFilters2");
+    const viewButtons = document.querySelectorAll(".view-btn");
+
+    let products = window.productsData || [];
+    let filteredProducts = [...products];
+
+    function renderProducts(data) {
+      productsContainer.innerHTML = data.length
+        ? ""
+        : `<p>No products found</p>`;
+      data.forEach((product) => {
+        const div = document.createElement("div");
+        div.className = "product-card";
+        div.innerHTML = `
+          <a href="product_details.html?id=${product.id}">
+            <div class="product-image">
+              <img src="${product.image}" alt="${product.name}">
+              ${
+                product.badge ? `<div class="product-badge">${product.badge}</div>` : ""
+              }
+            </div>
+            <div class="product-info">
+              <span class="product-category">${product.category}</span>
+              <h3 class="product-name">${product.name}</h3>
+              <div class="product-price">₹${product.price}</div>
+            </div>    
+          </a>
+          <div class="product-actions">
+            <button class="add-to-cart" onclick="addToCart(${product.id})">
+              <i class="ri-shopping-cart-line"></i> Add to Cart
+            </button>
+          </div>
+        `;
+        productsContainer.appendChild(div);
+      });
+      resultsCount.textContent = `${data.length} product${
+        data.length === 1 ? "" : "s"
+      } found`;
+
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const productId = button.getAttribute("data-id");
+          addToCart(productId);
+        });
+      });
+    }
+
+    function addToCart(productId) {
+      const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+      if (!loggedInUser) {
+        alert("Please login to add items to cart");
+        window.location.href = "user-account.html";
+        return;
+      }
+
+      window.addToCart(productId);
+
+      const button = document.querySelector(
+        `button[onclick="addToCart(${productId})"]`
+      );
+      if (button) {
+        const originalHTML = button.innerHTML;
+        button.innerHTML = '<i class="ri-check-line"></i> Added to Cart';
+        button.style.backgroundColor = "#4CAF50";
+        button.style.color = "white";
+
+        setTimeout(() => {
+          button.innerHTML = originalHTML;
+          button.style.backgroundColor = "";
+          button.style.color = "";
+        }, 2000);
+      }
+    }
+
+    function updatePriceDisplay() {
+      minPriceDisplay.textContent = `₹${parseInt(minPriceInput.value)}`;
+      maxPriceDisplay.textContent = `₹${parseInt(maxPriceInput.value)}`;
+    }
+
+    function filterProducts() {
+      const search = searchInput.value.toLowerCase();
+      const min = +minPriceInput.value;
+      const max = +maxPriceInput.value;
+      const selected = Array.from(categoryCheckboxes)
+        .filter((cb) => cb.checked && cb.id !== "all")
+        .map((cb) => cb.id.toLowerCase().replace(/\s/g, ""));
+      const showAll =
+        document.getElementById("all").checked || selected.length === 0;
+
+      filteredProducts = products.filter((p) => {
+        const catId = p.category.toLowerCase().replace(/\s/g, "");
+        const inSearch = p.name.toLowerCase().includes(search);
+        const inPrice = p.price >= min && p.price <= max;
+        const inCategory = showAll || selected.includes(catId);
+        return inSearch && inPrice && inCategory;
+      });
+      sortProducts();
+      renderProducts(filteredProducts);
+    }
+
+    function sortProducts() {
+      const val = sortSelect.value;
+      if (val === "price-low")
+        filteredProducts.sort((a, b) => a.price - b.price);
+      else if (val === "price-high")
+        filteredProducts.sort((a, b) => b.price - a.price);
+      else if (val === "name-asc")
+        filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+      else if (val === "name-desc")
+        filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    function resetFilters() {
+      searchInput.value = "";
+      minPriceInput.value = minPriceSlider.value = 0;
+      maxPriceInput.value = maxPriceSlider.value = 100000;
+      document.getElementById("all").checked = true;
+      categoryCheckboxes.forEach(
+        (cb) => cb.id !== "all" && (cb.checked = false)
+      );
+      sortSelect.value = "default";
+      updatePriceDisplay();
+      filterProducts();
+    }
+
+    // Reset filters on page load
+    resetFilters();
+
+    // Rest of the event listeners...
+    searchInput.addEventListener("input", () => filterProducts());
+    minPriceInput.addEventListener("input", () => {
+      minPriceSlider.value = minPriceInput.value;
+      updatePriceDisplay();
+      filterProducts();
+    });
+    maxPriceInput.addEventListener("input", () => {
+      maxPriceSlider.value = maxPriceInput.value;
+      updatePriceDisplay();
+      filterProducts();
+    });
+    minPriceSlider.addEventListener("input", () => {
+      minPriceInput.value = minPriceSlider.value;
+      updatePriceDisplay();
+      filterProducts();
+    });
+    maxPriceSlider.addEventListener("input", () => {
+      maxPriceInput.value = maxPriceSlider.value;
+      updatePriceDisplay();
+      filterProducts();
+    });
+    categoryCheckboxes.forEach((cb) =>
+      cb.addEventListener("change", filterProducts)
+    );
+    sortSelect.addEventListener("change", filterProducts);
+    resetFiltersBtn.addEventListener("click", resetFilters);
+    resetFiltersBtn2 &&
+      resetFiltersBtn2.addEventListener("click", resetFilters);
+    viewButtons.forEach((btn) =>
+      btn.addEventListener("click", (e) => {
+        viewButtons.forEach((b) => b.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+        const view = e.currentTarget.getAttribute("data-view");
+        productsContainer.classList.toggle("list-view", view === "list");
+      })
+    );
+
+    updatePriceDisplay();
+  });
+</script>
+  </body>
+</html>
